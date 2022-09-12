@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ActivosController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\EmpleadosController;
 
 
 /*
@@ -34,10 +35,16 @@ Route::get('activo/create',[ActivosController::class,'create']);
 
 Route::resource('Activos', ActivosController::class);
 
+// Enrutar vista para los empleados
+Route::resource('Empleados', EmpleadosController::class);
+
+Route::get('empleado/index',[EmpleadosController::class,'index']);
+Route::get('empleado/create',[EmpleadosController::class,'create']);
+
 
 
 //Route::get('/Activos', [\App\Http\Controllers\ActivosController::class, 'Activo'])->name('Activos');
-Route::get('/Empleados', [\App\Http\Controllers\EmpleadosController::class, 'Empleado'])->name('Empleado');
+//Route::get('/Empleados', [\App\Http\Controllers\EmpleadosController::class, 'Empleado'])->name('Empleado');
 
 
 

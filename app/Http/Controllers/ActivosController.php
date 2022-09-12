@@ -15,7 +15,7 @@ class ActivosController extends Controller
     
     public function index(){
    
-        $datos['Activos'] = Activo::paginate(10); //
+        $datos['Activos'] = Activo::paginate(15); //Mostrar paginacion de 10 datos
         return view('activo.index', $datos);
        
     }

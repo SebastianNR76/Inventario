@@ -7,8 +7,9 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
     </head>
-<body>
+<body background-color #fff; >
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         
@@ -26,7 +27,8 @@
     <div class=" text-center alling-items-center justify-content-center">
         <a sys_getloadavg href="http://127.0.0.1:8000/Activos"class="btn btn-info" >Ir a los activos</a>
     <a href="http://127.0.0.1:8000/home" class="btn btn-secondary">Ir al home</a>
-        <a href="http://127.0.0.1:8000/Empleados" class="btn btn-warning">Ir a empleados</a>
+    
+    <a href="{{url('empleado/index')}}"class="btn btn-primary"> Ir a Empleados</a>
 
         </div>
 

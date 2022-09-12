@@ -8,6 +8,9 @@
              
          </nav>
 
+    <div  class=" text-center alling-items-center justify-content-center">
+    <h1>ACTIVOS ASW</h1>
+    </div>
 
 <a href="{{url('activo/create')}} " class= "btn btn-success"> Ingresar nuevo activo </a>
 </br>
@@ -52,7 +55,8 @@
          @endforeach
     </tbody>
 </table>
-<a href="{{url('home/')}}" class="btn btn-primary"> Ir al home </a>
+<a href="{{url('home/')}}" class="btn btn-secondary"> Ir al home </a>
+<a href="{{url('empleado/index')}}" class="btn btn-primary"> Ir Empleados </a>
 
 </div>
 @endsection
