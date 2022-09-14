@@ -32,7 +32,8 @@
                     <ul class="navbar-nav me-auto">
 
                     </ul>
-
+                    <!--  Paginador -->
+                 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
                         <!-- Authentication Links -->

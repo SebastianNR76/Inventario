@@ -36,13 +36,37 @@ class ActivosController extends Controller
 
         // $Activos = $request->all();
   
-          $Activos = $request->except('_token'); // No enviar el token
+        // $Activos = $request->except('_token'); // No enviar el token
   
-          Activo::insert($Activos); // Insertar datos en el modelo, Pirmero MODELO inserta lo que la variable recibe
+         // Activo::insert($Activos); // Insertar datos en el modelo, Pirmero MODELO inserta lo que la variable recibe
   
           //return response()->json($Activos); // 
 
-          return redirect('Activos')->with('mensaje','Activo agregado con éxito');
+        //  return redirect('Activos')->with('mensaje','Activo agregado con éxito');
+
+          $campos = [
+            'PlacaASW'=>'required|string|max:100'
+            ,
+            'Modelo'=>'required|string|max:100'
+            ,
+            'Marca'=>'required|string|max:100'
+            ,
+            'Tipo'=>'required|string|max:100'
+            ,
+            'SerialFabricante'=>'required|string|max:100'
+            ,
+            'FechaIngreso'=>'required|string|max:100'
+            ,
+            'Estado'=>'required|string|max:100'
+
+            ];
+            $mensaje = [
+            'required'=>'El :attribute es requerido'   
+            ,
+            ];
+            $this->validate($request, $campos, $mensaje);
+           
+           
   
       }
 
@@ -58,6 +82,8 @@ class ActivosController extends Controller
         Activo::where('id', '=',$id)->update($Activos); // actualiza los datos del Modelo Activo 
         $Activos = Activo::findOrFail($id); // Recupera la información
         return view('activo.edit', compact('Activos')); // Envia al formulario con los datos actualizados
+       
+    
     }
 
 

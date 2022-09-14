@@ -2,6 +2,8 @@
 @section('activo')
 <div class="container">
 
+
+
         <nav class="navbar navbar-light bg-main">
          
                 
